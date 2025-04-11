@@ -1,0 +1,16 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <!-- StyleGuide -->
+        <ResourceDictionary Source="StyleGuide/Colors.xaml"/>
+        <ResourceDictionary Source="StyleGuide/Typography.xaml"/>
+        <ResourceDictionary Source="StyleGuide/Dimensions.xaml"/>
+        <!-- Styles -->
+        <ResourceDictionary Source="Styles/HiddenTabControlStyle.xaml"/>
+        <ResourceDictionary Source="Styles/TabRadioButtonStyle.xaml"/>
+        <ResourceDictionary Source="Styles/ButtonStyles.xaml"/>
+        <ResourceDictionary Source="Styles/InputStyles.xaml"/>
+        <ResourceDictionary Source="Styles/DataGridStyles.xaml"/>
+        <!-- 기타 필요한 리소스 파일 추가 가능 -->
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

@@ -1,0 +1,9 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <!-- 기본 여백 및 크기 정의 -->
+    <sys:Double x:Key="HorizontalPadding">20</sys:Double>
+    <sys:Double x:Key="VerticalPadding">10</sys:Double>
+    <sys:Double x:Key="ButtonHeight">34</sys:Double>
+    <sys:Double x:Key="InputHeight">36</sys:Double>
+</ResourceDictionary>

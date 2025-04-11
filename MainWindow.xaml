@@ -1,0 +1,8 @@
+﻿<Window x:Class="LogMonitoringApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:shell="clr-namespace:LogMonitoringApp.Shell"
+        Title="Log Monitoring App" Height="1080" Width="1920">
+    <!-- Shell(AppShell) 호출 -->
+    <shell:AppShell />
+</Window>
