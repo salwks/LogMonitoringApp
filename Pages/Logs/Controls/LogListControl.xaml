@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="LogMonitoringApp.Pages.Logs.Controls.LogListControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Height="Auto">
+    <Grid>
+        <DataGrid x:Name="LogDataGrid" AutoGenerateColumns="False" 
+              HeadersVisibility="Column" CanUserAddRows="False"
+              RowStyle="{StaticResource DataGridRowStyle}"
+              ColumnHeaderStyle="{StaticResource DataGridHeaderStyle}"
+              Background="White"
+              BorderThickness="0"
+              GridLinesVisibility="None">
+            <DataGrid.Columns>
+                <!-- 체크박스 열 -->
+                <DataGridTemplateColumn Width="40">
+                    <DataGridTemplateColumn.Header>
+                        <CheckBox x:Name="SelectAllCheckBox" Click="SelectAllCheckBox_Click"/>
+                    </DataGridTemplateColumn.Header>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Grid VerticalAlignment="Center">
+                                <CheckBox IsChecked="{Binding IsSelected, Mode=TwoWay}" 
+                          HorizontalAlignment="Center" 
+                          VerticalAlignment="Center"/>
+                            </Grid>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <!-- 일시 -->
+                <DataGridTextColumn Header="일시" Binding="{Binding Timestamp}" Width="120"
+                            ElementStyle="{StaticResource DataGridCenterCellStyle}"/>
+                <!-- 심각도 -->
+                <DataGridTextColumn Header="심각도" Binding="{Binding Severity}" Width="80"
+                            ElementStyle="{StaticResource DataGridCenterCellStyle}"/>
+                <!-- 로그 구분 -->
+                <DataGridTextColumn Header="로그 구분" Binding="{Binding LogCategory}" Width="100"
+                            ElementStyle="{StaticResource DataGridCenterCellStyle}"/>
+                <!-- 로그 아이디 -->
+                <DataGridTextColumn Header="로그 아이디" Binding="{Binding LogId}" Width="130"
+                            ElementStyle="{StaticResource DataGridCenterCellStyle}"/>
+                <!-- 로그 메시지 -->
+                <DataGridTextColumn Header="로그 메시지" Binding="{Binding Message}" Width="*"
+                            ElementStyle="{StaticResource DataGridLeftCellStyle}"/>
+                <!-- 사용자 -->
+                <DataGridTextColumn Header="사용자" Binding="{Binding User}" Width="100"
+                            ElementStyle="{StaticResource DataGridCenterCellStyle}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>
